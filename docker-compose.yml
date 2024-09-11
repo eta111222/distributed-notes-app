@@ -1,0 +1,89 @@
+services:
+  api-gateway:
+    build:
+      context: ./api-gateway
+    container_name: api-gateway
+    volumes:
+      - ./api-gateway/nginx/conf.d:/etc/nginx/conf.d
+      - ./api-gateway/nginx/nginx.conf:/etc/nginx/nginx.conf  
+      - ./api-gateway/ssl:/etc/nginx/ssl 
+    ports:
+      - "80:80"     
+      - "443:443" 
+    depends_on:
+      - user-service
+      - notes-service
+      - log-service  
+    networks:
+      - my-network
+
+  user-service:
+    build:
+      context: ./user-service
+    container_name: user-service
+    ports:
+      - "5002:5000"
+    environment:
+      - DATABASE_URL=sqlite:///users.db
+      - MONGO_URI=mongodb+srv://Eta:HS7Kwj9QYX7A0Mfx@eta-project.hkqul.mongodb.net/notesdb?retryWrites=true&w=majority
+    depends_on:
+      - rabbitmq
+    networks:
+      - my-network
+
+  notes-service:
+    build:
+      context: ./notes-service
+    container_name: notes-service
+    ports:
+      - "3000:3000"
+    depends_on:
+      - rabbitmq
+    environment:
+      - MONGO_URI=mongodb+srv://Eta:HS7Kwj9QYX7A0Mfx@eta-project.hkqul.mongodb.net/notesdb?retryWrites=true&w=majority
+    networks:
+      - my-network
+
+  notification-service:
+    build:
+      context: ./notification-service
+    container_name: notification-service
+    depends_on:
+      rabbitmq:
+        condition: service_healthy 
+    environment:
+      - RABBITMQ_URL=amqp://rabbitmq:5672
+    networks:
+      - my-network
+
+  log-service:
+    build:
+      context: ./log-service
+    container_name: log-service
+    ports:
+      - "5001:5001"
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      - MONGO_URI=mongodb+srv://Eta:HS7Kwj9QYX7A0Mfx@eta-project.hkqul.mongodb.net/notesdb?retryWrites=true&w=majority
+      - RABBITMQ_URL=amqp://rabbitmq:5672
+    networks:
+      - my-network
+
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: ["CMD-SHELL", "rabbitmqctl status"]
+      interval: 30s  
+      timeout: 10s
+      retries: 5  
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge

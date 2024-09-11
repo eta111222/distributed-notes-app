@@ -1,0 +1,159 @@
+2024-09-10 13:26:13,490:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-10 13:26:13,490:INFO:Socket connected: <socket.socket fd=12, family=30, type=1, proto=6, laddr=('::1', 49458, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-10 13:26:13,491:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106a068a0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106a068a0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-10 13:26:13,507:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106a068a0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:26:13,508:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106a068a0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:26:13,508:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106a068a0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:26:13,508:INFO:Created channel=1
+2024-09-10 13:26:30,634:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-10 13:26:30,635:INFO:Socket connected: <socket.socket fd=6, family=30, type=1, proto=6, laddr=('::1', 49471, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-10 13:26:30,635:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102d22930>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102d22930> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-10 13:26:30,641:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102d22930> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:26:30,641:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102d22930> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:26:30,641:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102d22930> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:26:30,641:INFO:Created channel=1
+2024-09-10 13:41:04,680:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-10 13:41:04,680:INFO:Socket connected: <socket.socket fd=12, family=30, type=1, proto=6, laddr=('::1', 49673, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-10 13:41:04,681:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102e1aae0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102e1aae0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-10 13:41:04,688:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102e1aae0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:41:04,688:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102e1aae0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:41:04,688:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102e1aae0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:41:04,689:INFO:Created channel=1
+2024-09-10 13:53:54,937:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-10 13:53:54,937:INFO:Socket connected: <socket.socket fd=12, family=30, type=1, proto=6, laddr=('::1', 49792, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-10 13:53:54,937:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102822c30>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102822c30> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-10 13:53:54,953:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102822c30> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:53:54,953:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102822c30> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:53:54,953:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102822c30> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:53:54,953:INFO:Created channel=1
+2024-09-10 13:53:55,257:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.102:5001
+2024-09-10 13:53:55,257:INFO:[33mPress CTRL+C to quit[0m
+2024-09-10 13:58:49,572:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-10 13:58:49,573:INFO:Socket connected: <socket.socket fd=12, family=30, type=1, proto=6, laddr=('::1', 49871, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-10 13:58:49,573:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x105ba7f20>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x105ba7f20> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-10 13:58:49,583:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x105ba7f20> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:58:49,583:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x105ba7f20> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:58:49,583:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x105ba7f20> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:58:49,583:INFO:Created channel=1
+2024-09-10 13:58:49,899:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.102:5001
+2024-09-10 13:58:49,900:INFO:[33mPress CTRL+C to quit[0m
+2024-09-10 13:58:49,901:INFO: * Restarting with stat
+2024-09-10 13:58:50,117:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-10 13:58:50,117:INFO:Socket connected: <socket.socket fd=8, family=30, type=1, proto=6, laddr=('::1', 49881, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-10 13:58:50,118:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x10497e9f0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x10497e9f0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-10 13:58:50,122:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x10497e9f0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:58:50,122:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x10497e9f0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:58:50,122:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x10497e9f0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 13:58:50,122:INFO:Created channel=1
+2024-09-10 13:58:50,235:WARNING: * Debugger is active!
+2024-09-10 13:58:50,242:INFO: * Debugger PIN: 999-807-359
+2024-09-10 14:01:43,821:INFO: * Detected change in '/Users/eta/Documents/distributed-notes-app/log-service/src/consumer.py', reloading
+2024-09-10 14:03:11,894:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-10 14:03:11,894:INFO:Socket connected: <socket.socket fd=12, family=30, type=1, proto=6, laddr=('::1', 49941, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-10 14:03:11,894:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x1048a6d50>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x1048a6d50> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-10 14:03:11,901:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x1048a6d50> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 14:03:11,901:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x1048a6d50> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 14:03:11,901:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x1048a6d50> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 14:03:11,901:INFO:Created channel=1
+2024-09-10 14:03:12,237:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.102:5001
+2024-09-10 14:03:12,237:INFO:[33mPress CTRL+C to quit[0m
+2024-09-10 14:03:12,238:INFO: * Restarting with stat
+2024-09-10 14:03:12,420:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-10 14:03:12,420:INFO:Socket connected: <socket.socket fd=13, family=30, type=1, proto=6, laddr=('::1', 49953, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-10 14:03:12,421:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x1045b2ae0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x1045b2ae0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-10 14:03:12,427:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x1045b2ae0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 14:03:12,428:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x1045b2ae0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 14:03:12,428:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x1045b2ae0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 14:03:12,428:INFO:Created channel=1
+2024-09-10 14:03:12,561:WARNING: * Debugger is active!
+2024-09-10 14:03:12,567:INFO: * Debugger PIN: 999-807-359
+2024-09-10 14:06:56,600:INFO:127.0.0.1 - - [10/Sep/2024 14:06:56] "[33mGET / HTTP/1.1[0m" 404 -
+2024-09-10 14:06:56,654:INFO:127.0.0.1 - - [10/Sep/2024 14:06:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-09-10 14:07:07,963:INFO:127.0.0.1 - - [10/Sep/2024 14:07:07] "[33mGET / HTTP/1.1[0m" 404 -
+2024-09-10 14:07:08,014:INFO:127.0.0.1 - - [10/Sep/2024 14:07:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-09-10 14:08:06,484:INFO: * Detected change in '/Users/eta/Documents/distributed-notes-app/log-service/src/routes.py', reloading
+2024-09-10 14:12:25,321:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-10 14:12:25,322:INFO:Socket connected: <socket.socket fd=12, family=30, type=1, proto=6, laddr=('::1', 50161, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-10 14:12:25,322:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106d72ba0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106d72ba0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-10 14:12:25,326:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106d72ba0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 14:12:25,326:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106d72ba0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 14:12:25,326:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106d72ba0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 14:12:25,326:INFO:Created channel=1
+2024-09-10 14:12:25,647:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.102:5001
+2024-09-10 14:12:25,647:INFO:[33mPress CTRL+C to quit[0m
+2024-09-10 14:12:25,649:INFO: * Restarting with stat
+2024-09-10 14:12:25,840:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-10 14:12:25,841:INFO:Socket connected: <socket.socket fd=7, family=30, type=1, proto=6, laddr=('::1', 50172, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-10 14:12:25,841:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x10232e9c0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x10232e9c0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-10 14:12:25,848:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x10232e9c0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 14:12:25,848:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x10232e9c0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 14:12:25,848:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x10232e9c0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 14:12:25,848:INFO:Created channel=1
+2024-09-10 14:12:25,936:WARNING: * Debugger is active!
+2024-09-10 14:12:25,942:INFO: * Debugger PIN: 999-807-359
+2024-09-10 14:12:36,511:INFO:127.0.0.1 - - [10/Sep/2024 14:12:36] "GET / HTTP/1.1" 200 -
+2024-09-10 16:27:34,617:INFO: * Detected change in '/Users/eta/Documents/distributed-notes-app/log-service/src/consumer.py', reloading
+2024-09-10 16:27:52,751:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-10 16:27:52,752:INFO:Socket connected: <socket.socket fd=12, family=30, type=1, proto=6, laddr=('::1', 51231, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-10 16:27:52,752:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102cfae40>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102cfae40> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-10 16:27:52,758:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102cfae40> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 16:27:52,758:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102cfae40> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 16:27:52,758:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x102cfae40> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 16:27:52,758:INFO:Created channel=1
+2024-09-10 16:27:53,115:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.102:5001
+2024-09-10 16:27:53,115:INFO:[33mPress CTRL+C to quit[0m
+2024-09-10 16:27:53,117:INFO: * Restarting with stat
+2024-09-10 16:27:53,324:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-10 16:27:53,324:INFO:Socket connected: <socket.socket fd=14, family=30, type=1, proto=6, laddr=('::1', 51242, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-10 16:27:53,324:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x104d6e7b0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x104d6e7b0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-10 16:27:53,330:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x104d6e7b0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 16:27:53,330:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x104d6e7b0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 16:27:53,330:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x104d6e7b0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-10 16:27:53,331:INFO:Created channel=1
+2024-09-10 16:27:53,455:WARNING: * Debugger is active!
+2024-09-10 16:27:53,463:INFO: * Debugger PIN: 999-807-359
+2024-09-10 16:27:58,360:INFO:Log received: {'eventType': 'note_updated', 'note': {'_id': '66df5097495f30b8d7ccd287', 'title': 'Updated Test Note4', 'content': 'This is the updated content4.', 'user': 'testuser2', 'createdAt': '2024-09-09T19:46:31.677Z', '__v': 0}, '_id': ObjectId('66e0576e70fc8948732e4de7')}
+2024-09-11 11:54:07,108:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-11 11:54:07,108:INFO:Socket connected: <socket.socket fd=12, family=30, type=1, proto=6, laddr=('::1', 52252, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-11 11:54:07,109:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x104e4b590>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x104e4b590> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-11 11:54:07,116:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x104e4b590> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-11 11:54:07,116:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x104e4b590> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-11 11:54:07,116:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x104e4b590> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-11 11:54:07,116:INFO:Created channel=1
+2024-09-11 11:59:33,076:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-11 11:59:33,077:INFO:Socket connected: <socket.socket fd=12, family=30, type=1, proto=6, laddr=('::1', 52343, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-11 11:59:33,077:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x103ed3bf0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x103ed3bf0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-11 11:59:33,087:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x103ed3bf0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-11 11:59:33,088:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x103ed3bf0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-11 11:59:33,088:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x103ed3bf0> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-11 11:59:33,088:INFO:Created channel=1
+2024-09-11 11:59:33,240:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.102:5001
+2024-09-11 11:59:33,240:INFO:[33mPress CTRL+C to quit[0m
+2024-09-11 11:59:33,241:INFO: * Restarting with stat
+2024-09-11 11:59:33,430:INFO:Pika version 1.3.2 connecting to ('::1', 5672, 0, 0)
+2024-09-11 11:59:33,431:INFO:Socket connected: <socket.socket fd=7, family=30, type=1, proto=6, laddr=('::1', 52355, 0, 0), raddr=('::1', 5672, 0, 0)>
+2024-09-11 11:59:33,431:INFO:Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106d7b590>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106d7b590> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>).
+2024-09-11 11:59:33,438:INFO:AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106d7b590> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-11 11:59:33,438:INFO:AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106d7b590> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-11 11:59:33,438:INFO:Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x106d7b590> params=<URLParameters host=localhost port=5672 virtual_host=/ ssl=False>>
+2024-09-11 11:59:33,438:INFO:Created channel=1
+2024-09-11 11:59:33,564:WARNING: * Debugger is active!
+2024-09-11 11:59:33,571:INFO: * Debugger PIN: 999-807-359
