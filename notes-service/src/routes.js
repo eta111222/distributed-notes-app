@@ -8,7 +8,7 @@ const router = express.Router();
 
 const verifyUser = async (token) => {
     try {
-        const response = await axios.get('http://user-service/api/verify', {
+        const response = await axios.get('http://user-service:5000/auth/api/verify', {
             headers: { Authorization: `Bearer ${token}` }
         });
         return response.data;
@@ -20,7 +20,7 @@ const verifyUser = async (token) => {
 
 function publishNoteEvent(eventType, note) {
     try {
-        amqp.connect('amqp://localhost', (err, connection) => {
+        amqp.connect('amqp://rabbitmq:5672', (err, connection) => {
             if (err) throw err;
 
             connection.createChannel((err, channel) => {
@@ -59,12 +59,20 @@ router.post('/', authenticateJWT, async(req, res, next) => {
         const user = await verifyUser(token);
 
         const savedNote = await createNote(req, res);
+
         console.log('Note successfully saved:', savedNote);
 
-        publishNoteEvent('note_created', savedNote);  
-        return res.status(201).json(savedNote);  
+        if (savedNote) {
+            console.log('Note successfully saved:', savedNote);
+            publishNoteEvent('note_created', savedNote);
+            return res.status(201).json(savedNote);
+        } else {
+            return res.status(400).json({ message: 'Error saving note' });
+        }
     } catch (err) {
-        res.status(500).json({ message: err.message });
+        if (!res.headersSent) {
+            res.status(500).json({ message: err.message });
+        }
     }
 });
 
@@ -80,16 +88,46 @@ router.put('/:id', authenticateJWT, async(req, res, next) => {
 
         console.log('Updated note:', updatedNote);
 
-        publishNoteEvent('note_updated', updatedNote);  
-
-        res.status(200).json(updatedNote);  
+        if (updatedNote) {
+            console.log('Updated note:', updatedNote);
+            publishNoteEvent('note_updated', updatedNote);
+            return res.status(200).json(updatedNote);
+        } else {
+            return res.status(404).json({ message: 'Note not found' });
+        }  
     } catch (err) {
-        res.status(401).json({ message: err.message });
+        if (!res.headersSent) {
+            res.status(500).json({ message: err.message });
+        }
+    }
+});
+
+router.delete('/:id', authenticateJWT, async (req, res, next) => {
+    const { authorization } = req.headers;
+    const token = authorization.split(' ')[1];
+
+    try {
+        const user = await verifyUser(token);
+
+        const deletedNote = await deleteNote(req, res);
+        if (deletedNote) {
+            console.log('Note successfully deleted:', deletedNote);
+
+            publishNoteEvent('note_deleted', deletedNote);
+
+            return res.status(200).json({ message: 'Note deleted', deletedNote });
+        } else {
+            return res.status(404).json({ message: 'Note not found' });
+        }
+    } catch (err) {
+        if (!res.headersSent) {
+            res.status(500).json({ message: err.message });
+        }
     }
 });
 
 router.get('/', authenticateJWT, getNotes);
 router.get('/:id', authenticateJWT, getNoteById);
-router.delete('/:id', authenticateJWT, deleteNote);
+
 
 module.exports = router;

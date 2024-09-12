@@ -2,7 +2,7 @@ const Note = require('./models');
 
 exports.createNote = async (req, res) => {
     const { title, content, user } = req.body;
-  
+
     try {
         const newNote = new Note({
             title,
@@ -21,7 +21,7 @@ exports.createNote = async (req, res) => {
 };
 
 exports.getNotes = async (req, res) => {
-    const user = req.user;  
+    const user = req.user;    
     try {
         const notes = await Note.find({ user });
         res.json(notes);

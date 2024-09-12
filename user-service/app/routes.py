@@ -1,6 +1,7 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, current_app, redirect, url_for
+import os
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
+from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity, create_access_token
 from app.models import User
 from app import db
 
@@ -21,6 +22,7 @@ def register():
 
     user_id = new_user.id
     access_token = create_access_token(identity={'id': user_id, 'username': new_user.username})
+    current_app.logger.info(f"Generated JWT: {access_token}") 
 
     return jsonify({
         'message': 'User registered successfully',
@@ -31,16 +33,26 @@ def register():
         'access_token': access_token
     }), 201
 
-@bp.route('/login', methods=['POST'])
+@bp.route('/login', methods=['GET','POST'])
 def login():
-    data = request.get_json()
-    user = User.query.filter_by(username=data['username']).first()
+    if request.method == 'POST':
+        data = request.get_json()
 
-    if user and check_password_hash(user.password, data['password']):
-        access_token = create_access_token(identity={'id': user.id, 'username': user.username})
-        return jsonify({'access_token': access_token}), 200
-    else:
-        return jsonify({'message': 'Invalid credentials'}), 401
+        if not data or 'username' not in data or 'password' not in data:
+            current_app.logger.warning("Missing username or password in request")
+            return jsonify({'message': 'Missing credentials'}), 400
+        
+        user = User.query.filter_by(username=data['username']).first()
+
+        if user and check_password_hash(user.password, data['password']):
+            access_token = create_access_token(identity={'id': user.id, 'username': user.username})
+            current_app.logger.info(f"Generated JWT: {access_token}") 
+            return jsonify({'access_token': access_token}), 200
+        else:
+            return jsonify({'message': 'Invalid credentials'}), 401
+    
+    elif request.method == 'GET':
+        return redirect('http://localhost/index.html')
 
 @bp.route('/profile', methods=['GET'])
 @jwt_required()
@@ -52,4 +64,5 @@ def profile():
 @jwt_required()
 def verify():
     current_user = get_jwt_identity()
+    print(f"Current User: {current_user}")
     return jsonify({'user': current_user}), 200

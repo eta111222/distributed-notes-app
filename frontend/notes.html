@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Notes</h1>
+    <div id="notification" style="display:none; background-color: yellow; padding: 10px;"></div>
+
+    <div id="notes-list"></div>
+
+    <form id="note-form">
+        <input type="text" id="note-title" placeholder="Title" required><br>
+        <input type="text" id="note-user" placeholder="User" required><br>
+        <textarea id="note-content" placeholder="Write a note..." required></textarea><br>
+        <button type="button" onclick="submitNote()">Save Note</button>
+    </form>
+
+    <script>
+        console.log("JavaScript is loaded correctly");
+        const token = localStorage.getItem('jwt');
+
+        if (!token) {
+            alert('You are not logged in. Redirecting to login page.');
+            window.location.href = '/index.html';  
+            
+        }
+
+        const websocket = new WebSocket('ws://localhost:6789');
+        
+        websocket.onmessage = function(event) {
+            const notification = document.getElementById('notification');
+            notification.textContent = event.data;
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 5000); 
+        };
+
+        function submitNote() {
+            document.getElementById('note-form').dispatchEvent(new Event('submit'));
+        }
+
+        document.getElementById('note-form').addEventListener('submit', async (event) => {
+            event.preventDefault();  
+            console.log("Submit button clicked!");  
+
+            const title = document.getElementById('note-title').value;
+            const user = document.getElementById('note-user').value;
+            const content = document.getElementById('note-content').value;
+
+            console.log(`Title: ${title}, User: ${user}, Content: ${content}`);  
+
+            try {
+                const response = await fetch('http://localhost:3000/api/notes', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ title, user, content })
+                });
+
+                console.log("Fetch request sent!");  
+
+                if (response.ok) {
+                    console.log('Note saved successfully!');
+                    await fetchNotes();  
+                    document.getElementById('note-title').value = '';
+                    document.getElementById('note-user').value = '';
+                    document.getElementById('note-content').value = '';
+                } else {
+                    console.error('Failed to save note');
+                }
+            } catch (error) {
+                console.error('Error during fetch:', error);  
+            }
+        });
+
+        window.onload = function() {
+            console.log("Page loaded, calling fetchNotes");
+            fetchNotes();
+        };
+
+        async function fetchNotes() {
+            console.log("fetchNotes function called");
+            const response = await fetch('http://localhost:3000/api/notes', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+            const notes = await response.json();
+            console.log("Fetched notes:", notes);
+
+            const notesList = document.getElementById('notes-list');
+            
+            if (notes.length === 0) {
+                notesList.innerHTML = '<p>No notes available.</p>';
+                return;
+            }
+            
+            notesList.innerHTML = notes.map(note => `
+                <div>
+                    <h3>${note.title}</h3>
+                    <p>${note.content}</p>
+                    <p>By: ${note.user}</p>
+                    <button onclick="editNotePrompt('${note._id}', '${note.title}', '${note.content}', '${note.user}')">Edit</button>
+                    <button onclick="deleteNote('${note._id}')">Delete</button>
+                </div>
+            `).join('');
+        }
+
+        function editNotePrompt(noteId, title, content, user) {
+            const newTitle = prompt('Edit your title:', title);
+            const newContent = prompt('Edit your note:', content);
+            const newUser = prompt('Edit user:', user);
+            if (newTitle && newContent && newUser) {
+                updateNote(noteId, newTitle, newContent, newUser);
+            }
+        }
+
+        async function updateNote(noteId, title, content, user) {
+            const response = await fetch(`http://localhost:3000/api/notes/${noteId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({ title, user, content })
+            });
+
+            if (response.ok) {
+                await fetchNotes();
+            } else {
+                console.error('Failed to update note');
+            }
+        }
+
+        async function deleteNote(noteId) {
+            const response = await fetch(`http://localhost:3000/api/notes/${noteId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            if (response.ok) {
+                await fetchNotes();
+            } else {
+                console.error('Failed to delete note');
+            }
+        }
+
+        fetchNotes();
+    </script>
+</body>
+</html>
